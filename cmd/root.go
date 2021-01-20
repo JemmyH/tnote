@@ -6,14 +6,14 @@ import (
 	"os"
 	"os/user"
 
+	"github.com/jemmyh/terminal_note/note"
 	"github.com/spf13/cobra"
 	"gopkg.in/AlecAivazis/survey.v1"
-	"hujm.net/terminal_note/note"
 )
 
 /*
 * @CreateTime: 2021/1/12 20:59
-* @Author: hujiaming
+* @Author: JemmyHu <hujm20151021@gmail.com>
 * @Description:
  */
 
@@ -31,13 +31,14 @@ var rootCmd = &cobra.Command{
 	Long:  `Terminal Notebook is CLI App, which is implemented by Golang.`,
 }
 
+// Execute ...
 func Execute() {
 	if err := rootCmd.Execute(); err != nil {
 		os.Exit(0)
 	}
 }
 
-// GetUserName ...
+// GetUserName returns the current logined user, the same as `whoami`
 func GetUserName() string {
 	if userName == "" {
 		u, _ := user.Current()
@@ -46,6 +47,7 @@ func GetUserName() string {
 	return userName
 }
 
+// CheckNotebook make app exit if user's notebook does not exist.
 func CheckNotebook(userName string) {
 	if !note.CheckDbFileExist(userName) {
 		fmt.Printf("No existing notebook found for %s. Use `create` to create one.\n", userName)
@@ -53,6 +55,7 @@ func CheckNotebook(userName string) {
 	}
 }
 
+// GetInputPassword gets password from stdin.
 func GetInputPassword() string {
 	password := ""
 	prompt := &survey.Password{Message: "Please type your password:"}

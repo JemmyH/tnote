@@ -2,7 +2,7 @@ package note
 
 /*
 * @CreateTime: 2021/1/12 18:47
-* @Author: hujiaming
+* @Author: JemmyHu <hujm20151021@gmail.com>
 * @Description: define variables here
  */
 
@@ -74,10 +74,12 @@ func GetAppHome() string {
 	return appHome
 }
 
+// GetPubKeyName ...
 func GetPubKeyName() string {
 	return pubKeyTempName
 }
 
+// GetPrivateKeyName ...
 func GetPrivateKeyName() string {
 	return prvTempName
 }

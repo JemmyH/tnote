@@ -15,7 +15,7 @@ import (
 /*
 * @CreateTime: 2021/1/12 18:28
 * @Author: Jemmy@hujm20150121@gmail.com
-* @Description:
+* @Description: note is a message in notebook
  */
 
 // Note means a diary note

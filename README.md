@@ -1,9 +1,9 @@
 # terminal_note
-`terminal_note` is a terminal notebook app, in which you can record some notes in your terminal and set password for it.
+`terminal_note` is a terminal notebook app with password, in which you can record some notes in your terminal.
 
 ## Install
 ```go
-$ cd $GOPATH && git clone https://github.com/JemmyH/terminal_note.git
+$ cd $GOPATH && mkdir jemmyh && cd jemmyh && git clone https://github.com/JemmyH/terminal_note.git
 $ cd terminal_note && go build -o tnote && mv tnote $GOPATH/bin/
 ```
 

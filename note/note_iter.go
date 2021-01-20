@@ -8,7 +8,7 @@ import (
 
 /*
 * @CreateTime: 2021/1/12 20:49
-* @Author: hujiaming
+* @Author: JemmyHu <hujm20151021@gmail.com>
 * @Description: a iterator for note
  */
 

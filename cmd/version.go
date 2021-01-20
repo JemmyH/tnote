@@ -18,8 +18,8 @@ package cmd
 import (
 	"fmt"
 
+	"github.com/jemmyh/terminal_note/note"
 	"github.com/spf13/cobra"
-	"hujm.net/terminal_note/note"
 )
 
 // versionCmd represents the version command
@@ -35,6 +35,7 @@ func init() {
 	rootCmd.AddCommand(versionCmd)
 }
 
+// GetVersionStr returns the formated version string.
 func GetVersionStr() string {
 	return fmt.Sprintf("%s @%s", note.GetVersion(), note.GetAppName())
 }

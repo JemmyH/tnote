@@ -3,13 +3,11 @@ package note
 import (
 	"testing"
 	"time"
-
-	"github.com/stretchr/testify/assert"
 )
 
 /*
 * @CreateTime: 2021/1/13 11:31
-* @Author: hujiaming
+* @Author: JemmyHu <hujm20151021@gmail.com>
 * @Description:
  */
 
@@ -22,18 +20,4 @@ func init() {
 func TestNewNote(t *testing.T) {
 	note = NewNote("test content")
 	t.Log(note.String())
-}
-
-func TestNote_Serialize(t *testing.T) {
-	data := note.Serialize()
-	t.Logf("data: %s", data)
-
-	newNote := DeserializeNote(data)
-	t.Log(newNote.String())
-	assert.Equal(t, note.String(), newNote.String())
-}
-
-func TestGetHeadNote(t *testing.T) {
-	head := GetHeadNote()
-	t.Log(head.String())
 }

@@ -20,8 +20,8 @@ import (
 	"fmt"
 
 	"github.com/boltdb/bolt"
+	"github.com/jemmyh/terminal_note/note"
 	"github.com/spf13/cobra"
-	"hujm.net/terminal_note/note"
 )
 
 var (
@@ -99,6 +99,7 @@ func (p *printStruct) checkBreak(id []byte) bool {
 func (p *printStruct) printNote(n *note.Note) {
 	if p.verbose {
 		fmt.Println(n.String())
+		// TODO: use arrow 
 		// if p.reverse && n.PrevID != nil {
 		// 	fmt.Println("⇧")
 		// 	fmt.Println("|")
@@ -115,11 +116,10 @@ func (p *printStruct) printNote(n *note.Note) {
 var printCmd = &cobra.Command{
 	Use:   "print",
 	Short: "Print notes in your notebook",
-	PreRun: func(cmd *cobra.Command, args []string) {
+	PreRun: func(_ *cobra.Command, _ []string) {
 		CheckNotebook(GetUserName())
 	},
-	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Printf("user: %s, myP:%+v \n", GetUserName(), myP)
+	Run: func(_ *cobra.Command, _ []string) {
 		userName := GetUserName()
 		passwd := GetInputPassword()
 		switch myP.printType {
@@ -144,7 +144,7 @@ var printCmd = &cobra.Command{
 				}
 			}
 		case "range":
-
+			// TODO: range print
 		default:
 			fmt.Println("invalid type: " + myP.printType)
 			return

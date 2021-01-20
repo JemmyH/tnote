@@ -16,8 +16,8 @@ limitations under the License.
 package cmd
 
 import (
+	"github.com/jemmyh/terminal_note/note"
 	"github.com/spf13/cobra"
-	"hujm.net/terminal_note/note"
 )
 
 var content string
