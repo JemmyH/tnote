@@ -1,6 +1,6 @@
 package main
 
-import "github.com/jemmyh/terminal_note/cmd"
+import "github.com/jemmyh/tnote/cmd"
 
 /*
 * @CreateTime: 2021/1/14 15:31

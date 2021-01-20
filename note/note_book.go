@@ -198,7 +198,7 @@ func (b *NoteBook) DeleteNotePrefix(id []byte, userName, pwd string) {
 
 // GetDbFilePath returns the notebook path for userName.
 func GetDbFilePath(userName string) string {
-	// ~/.terminal_note/terminal_diary_xxx.db
+	// ~/.tnote/terminal_diary_xxx.db
 	folderName := GetAppFolderPath()
 	if _, err := os.Stat(folderName); os.IsNotExist(err) {
 		err := os.Mkdir(folderName, os.ModePerm)
@@ -248,7 +248,7 @@ func CheckDbFileExist(userName string) bool {
 }
 
 func GetAppFolderPath() string {
-	//  ~/.terminal_note/
+	//  ~/.tnote/
 	user, _ := user2.Current()
 	return user.HomeDir + "/" + GetAppHome()
 }

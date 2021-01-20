@@ -12,13 +12,13 @@ const (
 	// version ...
 	version = "v2.0.0"
 	// appHome is the folder name for App
-	appHome = ".terminal_note"
+	appHome = ".tnote"
 
 	// idLayout use timestamp as note id
 	idLayout = "20060102150405"
 
 	// dbFileNameTemplate local file to save a notebook
-	dbFileNameTemplate = ".terminal_note_%s.db"
+	dbFileNameTemplate = ".tnote_%s.db"
 	// dbBucket bucket name to save all notes in a notebook
 	dbBucket = "diary"
 	// dbHeadKey default key to save the first tip note, which is generated default
@@ -30,8 +30,8 @@ const (
 	tailContent = "end"
 
 	rsaBits        = 2048
-	pubKeyTempName = "terminal_note_%s_rsa.pub"
-	prvTempName    = "terminal_note_%s_rsa"
+	pubKeyTempName = "tnote_%s_rsa.pub"
+	prvTempName    = "tnote_%s_rsa"
 )
 
 // GetAppName ...

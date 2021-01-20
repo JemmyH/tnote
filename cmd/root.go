@@ -6,7 +6,7 @@ import (
 	"os"
 	"os/user"
 
-	"github.com/jemmyh/terminal_note/note"
+	"github.com/jemmyh/tnote/note"
 	"github.com/spf13/cobra"
 	"gopkg.in/AlecAivazis/survey.v1"
 )

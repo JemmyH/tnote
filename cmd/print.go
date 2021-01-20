@@ -20,7 +20,7 @@ import (
 	"fmt"
 
 	"github.com/boltdb/bolt"
-	"github.com/jemmyh/terminal_note/note"
+	"github.com/jemmyh/tnote/note"
 	"github.com/spf13/cobra"
 )
 

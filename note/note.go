@@ -15,17 +15,16 @@ import (
 /*
 * @CreateTime: 2021/1/12 18:28
 * @Author: Jemmy@hujm20150121@gmail.com
-* @Description: note is a message in notebook
+* @Description: note is a message in notebook, which is managed like a node in a double linked list.
  */
 
-// Note means a diary note
+// Note means a note in notebook
 type Note struct {
-	ID        []byte // 某一天20191214
-	PrevID    []byte // 上一条ID
-	NextID    []byte // 下一条ID
-	Content   []byte // 日记内容
-	IsSecret  bool   // TODO: 是否加密，如果加密，则需要密码访问
-	Timestamp int64  // 时间戳
+	ID        []byte
+	PrevID    []byte
+	NextID    []byte
+	Content   []byte
+	Timestamp int64
 }
 
 // NewNote returns a `Note` object with `content` and `timestamp`
