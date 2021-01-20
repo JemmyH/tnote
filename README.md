@@ -1,10 +1,15 @@
-# terminal_note
-`terminal_note` is a terminal notebook app with password, in which you can record some notes in your terminal.
+# tnote
+`tnote` is a terminal notebook app with password, in which you can record some notes in your terminal.
 
 ## Install
-```go
-$ cd $GOPATH && mkdir jemmyh && cd jemmyh && git clone https://github.com/JemmyH/terminal_note.git
-$ cd terminal_note && go build -o tnote && mv tnote $GOPATH/bin/
+```bash
+$ cd $GOPATH && mkdir jemmyh && cd jemmyh && git clone https://github.com/JemmyH/tnote.git
+$ cd tnote && go build -o tnote && mv tnote $GOPATH/bin/
+```
+
+or install with `go get`:
+```bash
+go get -u -v github.com/JemmyH/tnote
 ```
 
 ## Usage
@@ -37,7 +42,7 @@ tnote create --owner=xxx
 
 #### add a note
 ```bash
-tnote add --owner=xxx --content=我的头发长天下我为王
+tnote add --owner=xxx --content=hello world
 ```
 
 #### delete notes which has prefixed id
